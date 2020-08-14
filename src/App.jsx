@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.scss'
-import Home from './pages/home/index'
+import Home from './pages/home/index.jsx'
+import Header from './pages/header/index.jsx'
 class App extends Component {
 	constructor(props) {
 		super(props)
@@ -9,6 +10,7 @@ class App extends Component {
 	render() {
 		return (
 			<div>
+				<Header></Header>
 				<Home></Home>
 			</div>
 		)

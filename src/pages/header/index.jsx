@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import '../../assets/iconfont/iconfont'
 import "./index.scss"
 class Index extends Component {
     constructor(props) {
@@ -7,8 +8,9 @@ class Index extends Component {
     }
     render() {
         return (
-            <div className="main">
-                <p></p>
+            <div className="header">
+                <p className='title'>首页</p>
+                <p><i className='iconfont iconicon_search'></i></p>
             </div>
         )
     }

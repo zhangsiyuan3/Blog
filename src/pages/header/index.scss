@@ -1,0 +1,19 @@
+.header {
+    font-family: miranafont, "Hiragino Sans GB", STXihei, "Microsoft YaHei", SimSun, sans-serif;
+    width: 100%;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+
+    .title {
+        padding: 12px 15px;
+        display: inline-block;
+        color: #fff;
+        text-shadow: 0 0 #000, -1px -1px #000, 0 -1px #000, -1px 0 #000;
+
+    }
+}

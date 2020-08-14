@@ -1,9 +1,22 @@
-.main {
-    background: pink;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    .box {
-      background:skyblue;
-    }
-  }
+// .main {
+//     background: pink;
+//     width: 300px;
+//     height: 300px;
+//     margin: 0 auto;
+//     .box {
+//       background:skyblue;
+//     }
+//   }
+::selection {
+    color: #fff;
+    background: #a0dad0;
+}
+body{
+    font: 300 17px miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;
+    color: #404040;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}

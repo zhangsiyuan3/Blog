@@ -1,4 +1,8 @@
 import React,{Component} from 'react';
+<<<<<<< HEAD
+=======
+import "./index.scss"
+>>>>>>> 59cdf84cbf312e23a6967717a7e0b021e7a38e14
 class Index extends Component {
     constructor(props) {
         super(props)

@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import '../../assets/iconfont/iconfont'
 import "./index.scss"
 class Index extends Component {
     constructor(props) {

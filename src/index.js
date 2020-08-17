@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.jsx';
-import './assets/iconfont/iconfont'
 // import axios from 'axios'
 // axios.defaults.baseURL = 'http://44454.cn';
 

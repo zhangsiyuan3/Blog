@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import "./index.scss"
 class Index extends Component {
     constructor(props) {
         super(props)
@@ -8,13 +9,7 @@ class Index extends Component {
         return (
             <div className="header">
                 <p className='title'>首页</p>
-                <p><i className='iconfont icon-soushuo'></i></p>
-                <p><i className='iconfont icon-soushuo'></i></p>
-                <p><i className='iconfont icon-soushuo'></i></p>
-                <p><i className='iconfont icon-soushuo'></i></p>
-                <p><i className='iconfont icon-soushuo'></i></p>
-                <p><i className='iconfont icon-soushuo'></i></p>
-                <p><i className='iconfont icon-soushuo'></i></p>
+                <p className='iconsearch'><i className='iconfont iconicon_search'></i></p>
             </div>
         )
     }

@@ -8,12 +8,24 @@
     top: 0;
     display: flex;
     justify-content: flex-end;
-
+    padding: 0 50px;
     .title {
-        padding: 12px 15px;
+        // padding: 12px 15px;
         display: inline-block;
         color: #fff;
         text-shadow: 0 0 #000, -1px -1px #000, 0 -1px #000, -1px 0 #000;
 
+    }
+    p{
+        padding: 0 15px;
+        height: 50px;
+        line-height: 50px;
+        cursor: pointer;
+        i{
+            font-size: 30px;
+        }
+    }
+    .iconsearch{
+        margin-left: 20px;
     }
 }

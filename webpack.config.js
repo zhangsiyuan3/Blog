@@ -15,6 +15,10 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
+				loader: 'url-loader?limit=8192',
+			},
+			{
 				//转换css文件
 				test: /\.css$/,
 				use: 'style-loader!css-loader',
@@ -35,11 +39,7 @@ module.exports = {
 				test: /\.(js|jsx)$/,
 				loader: 'babel-loader',
 				exclude: /node_modules/,
-      },
-      { 
-        test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, 
-        loader: 'url-loader?limit=8192'
-      }
+			},
 		],
 	},
 	// 开启一个虚拟服务器

@@ -26,7 +26,19 @@ module.exports = {
 			{
 				//转换scss文件
 				test: /\.scss$/,
-				use: ['style-loader', 'css-loader', 'sass-loader'],
+				// exclude: path.resolve(__dirname, './src/assets/scss/App.scss'),
+				use: [
+					{ loader: 'style-loader' },
+					{ loader: 'css-loader' },
+					{ loader: 'sass-loader' },
+					{
+						loader: 'sass-resources-loader',
+						// options: { resources: './src/assets/scss/App.scss' },
+						options: {
+							resources: [path.resolve(__dirname, './src/assets/scss/App.scss')]
+						},
+					},
+				],
 				// 加载时顺序从右向左
 			},
 			{

@@ -1,0 +1,376 @@
+.headertop {
+  position: relative;
+  overflow: hidden;
+
+  .centerbg {
+    background-image: url(https://jensonhui.top/usr/themes/Akina/images/headerbg.jpg);
+    text-shadow: 0 0 black;
+    width: 100%;
+    z-index: 0;
+    height: 550px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: -1;
+
+    .slant-left {
+      background: #fff;
+      width: 101%;
+      position: absolute;
+      bottom: -80px;
+      right: 48%;
+      height: 200px;
+      -webkit-transform: rotate(6deg);
+      -moz-transform: rotate(6deg);
+      -ms-transform: rotate(6deg);
+      -o-transform: rotate(6deg);
+      transform: rotate(6deg);
+    }
+
+    .slant-right {
+      background: #fff;
+      width: 101%;
+      position: absolute;
+      bottom: -80px;
+      left: 48%;
+      height: 200px;
+      -webkit-transform: rotate(-6deg);
+      -moz-transform: rotate(-6deg);
+      -ms-transform: rotate(-6deg);
+      -o-transform: rotate(-6deg);
+      transform: rotate(-6deg);
+    }
+
+    .header_content {
+      position: relative;
+      max-width: 800px;
+      padding: 0 10px;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      text-align: center;
+
+      .header_tou {
+        a {
+          background-color: transparent;
+          text-decoration: none;
+
+          img {
+            width: 80px;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, .3);
+          }
+        }
+      }
+
+      .header-info {
+        font-family: miranafont, "Hiragino Sans GB", STXihei, "Microsoft YaHei", SimSun, sans-serif;
+        width: 60%;
+        margin: auto;
+        font-size: 14px;
+        color: #fff;
+        padding: 20px 30px;
+        margin-top: 30px;
+        letter-spacing: 1px;
+        line-height: 30px;
+        background: rgba(0, 0, 0, .3);
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .top-social {
+        height: 32px;
+        margin-top: 30px;
+        margin-left: 10px;
+        list-style: none;
+        display: inline-block;
+        font-family: miranafont, "Hiragino Sans GB", STXihei, "Microsoft YaHei", SimSun, sans-serif;
+        display: flex;
+        justify-content: center;
+
+        p {
+          margin: 0;
+          margin-right: 10px;
+
+          img {
+            height: 32px;
+            width: 32px;
+            background: #fff;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, .3);
+          }
+        }
+      }
+    }
+  }
+}
+
+#content {}
+
+.site_content {
+  max-width: 800px;
+  padding: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .notice {
+    padding: 20px;
+    font-family: miranafont, "Hiragino Sans GB", STXihei, "Microsoft YaHei", SimSun, sans-serif;
+    color: #505050;
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background: #fbfbfb;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+
+    i {
+      // float: left;
+      margin-right: 10px;
+      color: #a0dad0;
+      font-size: 20px;
+    }
+  }
+
+  .top-feature {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    font-family: miranafont, "Hiragino Sans GB", STXihei, "Microsoft YaHei", SimSun, sans-serif;
+
+    .fes-title {
+      color: #757575;
+      font-size: 16px;
+      font-weight: 400;
+      padding-bottom: 15px;
+      border-bottom: 1px dashed #ececec;
+    }
+
+    .feature-content {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+
+      .feature-img {
+        width: 32.9%;
+        height: 160px;
+        position: relative;
+        border-radius: 5px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
+
+        .feature-title {
+          margin: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          color: #fff;
+          background-color: #bbe2db;
+          text-align: center;
+          line-height: 160px;
+          opacity: 0;
+          // animation: myfirst 1s alternate linear infinite;                    
+          // transition: color .2s ease-out, border .2s ease-out, opacity .2s ease-out;
+          transition: opacity 0.5s;
+
+        }
+
+        .feature-title:hover {
+          opacity: 1;
+          // animation: myfirst 1s;
+        }
+      }
+    }
+  }
+}
+
+.content-area {
+  .main {
+    padding: 80px 0 0;
+    font-family: miranafont, "Hiragino Sans GB", STXihei, "Microsoft YaHei", SimSun, sans-serif;
+
+    .main-title {
+      color: #757575;
+      font-size: 16px;
+      font-weight: 400;
+      padding-bottom: 15px;
+      border-bottom: 1px dashed #ececec;
+    }
+
+    .main-content {
+      width: 100%;
+      margin: 0 0 4% 0;
+      position: relative;
+
+      &:hover .info-meta {
+        opacity: 1;
+        visibility: visible;
+        transform: translate3d(-100px, 0, 0);
+      }
+
+      // 左侧划出
+      .info-meta {
+        margin-top: 10px;
+        font-family: din, 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
+        position: absolute;
+        top: 30px;
+        opacity: 0;
+        padding-top: 8px;
+        border-top: 1px solid #ddd;
+        transform: translate3d(0px, 0, 0);
+        visibility: hidden;
+        transition: .7s all ease;
+        -webkit-transition: .6s all ease;
+        font-size: $small_fontSize;
+        color: $fontColor;
+
+        div {
+          color: #b3b3b3;
+          display: flex;
+          align-items: center;
+          padding-top: 3px;
+
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .main-flex {
+        display: flex;
+        align-items: center;
+
+        .leftImg {
+          position: relative;
+
+          .overlay {
+            i {
+              position: absolute;
+              top: 10px;
+              left: 10px;
+              font-size: 25px;
+              color: #fff;
+              width: 80px;
+              height: 80px;
+              line-height: 80px;
+              text-align: center;
+              background: #bbe2db;
+              border-radius: 50%;
+              opacity: 0;
+              z-index: 1;
+              transition: opacity 0.5s;
+
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+
+          img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            padding: 2px;
+            border: 1px solid #dadada;
+          }
+        }
+
+        .main-details {
+          display: flex;
+          flex-direction: column;
+          padding-left: 5%;
+          width: 87%;
+
+          .details-title {
+            font-size: 20px;
+            font-weight: 400;
+            height: 50px;
+            line-height: 50px;
+            margin: 0;
+            // margin: 0 0 0 17%;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+
+            .details_word {
+              font-weight: 600;
+              color: #737373;
+              font-family: miranafont, "Hiragino Sans GB", STXihei, "Microsoft YaHei", SimSun, sans-serif;
+              display: inline-block;
+              @include ellipsis(75%)
+            }
+
+            .details_time {
+              // position: absolute;
+              // right: 0;
+              // top: 16px;
+              font-size: 12px !important;
+              color: #989898;
+              letter-spacing: 1px;
+              font-family: din, 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
+
+              a {
+                margin: 0 5px;
+              }
+
+              .hotcolor {
+                color: $hotColor;
+              }
+
+              .iconshijian {
+                font-size: 13px !important;
+              }
+            }
+          }
+
+          .details-content {
+            flex: 1;
+            min-height: 60px;
+            // margin: 0 0 0 17%;
+            font-size: 15px;
+            font-family: miranafont, "Hiragino Sans GB", STXihei, "Microsoft YaHei", SimSun, sans-serif;
+            color: #6f6f6f;
+            letter-spacing: 1px;
+            line-height: 30px;
+          }
+
+          .post-more {
+            margin-top: 10px;
+            text-align: right;
+            color: $backgroung_color;
+            opacity: 0.7;
+
+            i {
+              font-size: 25px;
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+
+      hr {
+        width: 30%;
+        height: 1px;
+        margin: 0 auto;
+        border: 0;
+        background: #efefef;
+      }
+    }
+  }
+
+}

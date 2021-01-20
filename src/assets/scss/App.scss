@@ -4,6 +4,7 @@ $backgroung_color: #35b995; //字体
 $fontColor:#404040;
 $hotColor:#ff3b00;
 $small_fontSize:13px;
+
 ::selection {
   color: #fff;
   background: #a0dad0;
@@ -51,3 +52,26 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+@mixin transitionMethod($time:0.5s){
+  transition: $time;
+}     
+
+// 禁止选中文本
+@mixin noselect {
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  
+  -khtml-user-select: none; /* Konqueror */
+  
+  -moz-user-select: none; /* Firefox */
+  
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  
+  user-select: none; /* Non-prefixed version, currently
+  
+  not supported by any browser */
+  
+  }

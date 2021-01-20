@@ -65,7 +65,7 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin({
 			//使用一个模板
-			template: 'src/index.html',
+			template: 'public/index.html',
 		}),
 	],
 }

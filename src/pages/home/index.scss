@@ -184,7 +184,7 @@
           opacity: 0;
           // animation: myfirst 1s alternate linear infinite;                    
           // transition: color .2s ease-out, border .2s ease-out, opacity .2s ease-out;
-          transition: opacity 0.5s;
+          @include transitionMethod();
 
         }
 
@@ -233,9 +233,12 @@
         transform: translate3d(0px, 0, 0);
         visibility: hidden;
         transition: .7s all ease;
-        -webkit-transition: .6s all ease;
         font-size: $small_fontSize;
         color: $fontColor;
+
+        div:first-child {
+          cursor: pointer;
+        }
 
         div {
           color: #b3b3b3;
@@ -255,6 +258,7 @@
 
         .leftImg {
           position: relative;
+          cursor: pointer;
 
           .overlay {
             i {
@@ -312,7 +316,15 @@
               color: #737373;
               font-family: miranafont, "Hiragino Sans GB", STXihei, "Microsoft YaHei", SimSun, sans-serif;
               display: inline-block;
-              @include ellipsis(75%)
+              @include ellipsis(75%);
+              @include transitionMethod();
+              cursor: pointer;
+
+              &:hover {
+                color: $backgroung_color;
+                opacity: .6;
+                // opacify($color: $backgroung_color, $amount: .7)
+              }
             }
 
             .details_time {
@@ -354,6 +366,7 @@
             text-align: right;
             color: $backgroung_color;
             opacity: 0.7;
+            cursor: pointer;
 
             i {
               font-size: 25px;

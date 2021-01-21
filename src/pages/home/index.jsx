@@ -22,10 +22,10 @@ class Index extends Component {
 			],
 		};
 	}
-  componentDidMount() {}
-  handleClick(){
-    console.log("dianji")
-  }
+	componentDidMount() {}
+	handleClick() {
+		console.log('dianji');
+	}
 	render() {
 		// 聚焦for循环
 		const Focusing = this.state.focusingData.map((item, index) => {

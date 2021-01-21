@@ -165,6 +165,7 @@
         position: relative;
         border-radius: 5px;
         overflow: hidden;
+        @include noselect();
 
         img {
           width: 100%;

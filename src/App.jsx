@@ -13,6 +13,7 @@ class App extends Component {
 			<Router>
 				<Header></Header>
 				{router.map((router, index) => {
+          // console.log(router)
 					if (router.exact) {
 						return <Route exact key={index} path={router.path} render={(props) => <router.component {...props} routes={router.routes} />} />;
 					} else {

@@ -1,6 +1,6 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin') //自动创建html文件
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin'); //自动创建html文件
 // const CleanWebpackPlugin = require('clean-webpack-plugin');//清除多余文件
 
 module.exports = {
@@ -21,7 +21,7 @@ module.exports = {
 			{
 				//转换css文件
 				test: /\.css$/,
-				use: 'style-loader!css-loader',
+				use: ['style-loader', 'css-loader'],
 			},
 			{
 				//转换scss文件
@@ -35,7 +35,7 @@ module.exports = {
 						loader: 'sass-resources-loader',
 						// options: { resources: './src/assets/scss/App.scss' },
 						options: {
-							resources: [path.resolve(__dirname, './src/assets/scss/App.scss')]
+							resources: [path.resolve(__dirname, './src/assets/scss/App.scss')],
 						},
 					},
 				],
@@ -54,10 +54,14 @@ module.exports = {
 			},
 		],
 	},
+	resolve: {
+		extensions: ['.js', '.jsx'],
+	},
 	// 开启一个虚拟服务器
 	devServer: {
 		contentBase: './dist',
 		hot: true,
+		historyApiFallback: true,
 	},
 	plugins: [
 		//每次编译都会把dist下的文件清除，我们可以在合适的时候打开这行代码，例如我们打包的时候，开发过程中这段代码关闭比较好
@@ -68,4 +72,4 @@ module.exports = {
 			template: 'public/index.html',
 		}),
 	],
-}
+};

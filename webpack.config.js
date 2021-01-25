@@ -59,6 +59,7 @@ module.exports = {
 	},
 	// 开启一个虚拟服务器
 	devServer: {
+    port: 8080,
 		contentBase: './dist',
 		hot: true,
 		historyApiFallback: true,

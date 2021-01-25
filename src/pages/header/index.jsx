@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import './index.scss';
+import { connect } from 'react-redux';
+// import store from "../../store/index"
 class Index extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
 	}
 	article() {
+    
 		this.props.history.push('/EditArticle');
 	}
 	render() {

@@ -10,4 +10,4 @@
               type: "CHGNAME",
               text: "王五",//将type为CHGNAME的修改为王五
             });
-  ```
+  ```  

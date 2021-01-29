@@ -4,12 +4,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); //自动创建html文�
 // const CleanWebpackPlugin = require('clean-webpack-plugin');//清除多余文件
 
 module.exports = {
-	devtool: 'cheap-module-eval-source-map', // 用于开发调试，方便清楚是那个文件出错 (共有7种)
+  devtool: 'cheap-module-eval-source-map', // 用于开发调试，方便清楚是那个文件出错 (共有7种)
 	entry: {
 		index: './src/index.js',
 	},
 	output: {
-		filename: 'bundle.js', // 输出的文件名
+    filename: 'bundle.js', // 输出的文件名
 		path: path.resolve(__dirname, 'dist'), //
 	},
 	module: {
@@ -61,7 +61,7 @@ module.exports = {
 	devServer: {
     port: 8080,
 		contentBase: './dist',
-		hot: true,
+    hot: true,
 		historyApiFallback: true,
 	},
 	plugins: [

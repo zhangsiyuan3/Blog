@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './index.scss';
-import store from '../../reducers/index';
+import { connect } from 'react-redux';
 // import imgURL from '../../assets/image/header.jpg'
 // const imgURL = require('../../assets/image/header.jpg')
 class Index extends Component {
@@ -21,8 +21,21 @@ class Index extends Component {
 					focusdata: '为 JetBrains 系列 IDE 设置背景图片',
 				},
 			],
-			// ArticleList: store.getState().getArticleList,
-			ArticleList: [],
+			// ArticleList: this.props.getArticleList,
+			ArticleList: [
+				{
+					imgUrl: 'https://jensonhui.top/usr/themes/Akina/images/feature/feature1.jpg',
+					articleTitle: '浅谈对 "用户体验" 的理解',
+				},
+				{
+					imgUrl: 'https://jensonhui.top/usr/themes/Akina/images/feature/feature2.jpg',
+					articleTitle: 'Mac微信防撤回小助手',
+				},
+				{
+					imgUrl: 'https://jensonhui.top/usr/themes/Akina/images/feature/feature3.jpg',
+					articleTitle: '为 JetBrains 系列 IDE 设置背景图片',
+				},
+			],
 		};
 	}
 	componentDidMount() {}
@@ -144,6 +157,19 @@ class Index extends Component {
 	}
 }
 
+const mapStateToProps = (state) => {
+	return {
+		getArticleList: state.getArticleList,
+	};
+};
+const mapDispatchToProps = (dispatch) => {
+	return {
+		pushArticleList: (value) => {
+			dispatch({ type: 'ARTICLE', getArticleList: value });
+		},
+	};
+};
+Index = connect(mapStateToProps, mapDispatchToProps)(Index);
 export default Index;
 
 // ReactDom.render(<App />,document.getElementById('root'));

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import 'braft-editor/dist/index.css';
 import './index.scss';
 import BraftEditor from 'braft-editor';
-import store from '../../reducers/index';
+import { connect } from 'react-redux';
 class Index extends Component {
 	constructor(props) {
 		super(props);
@@ -29,19 +30,16 @@ class Index extends Component {
 		});
 	};
 	preservation = () => {
-		let ArticleList = store.getState().getArticleList;
+		let ArticleList = this.props.getArticleList;
 		ArticleList.push({
 			articleTitle: this.state.Title,
 			article: this.state.editorState.toHTML(),
 			articleText: JSON.parse(this.state.editorState.toRAW()).blocks[0].text,
 			id: Math.floor(Math.random() * (999 - 1 + 1) + 1),
 		});
-		store.dispatch({
-			type: 'ARTICLE',
-			text: ArticleList,
-		});
-               
-		console.log('保存按钮', store.getState().getArticleList);
+		this.props.pushArticleList(ArticleList);
+    this.props.history.push('/');
+    console.log(this)
 	};
 	inputValChange = (e) => {
 		this.setState({
@@ -69,4 +67,18 @@ class Index extends Component {
 		);
 	}
 }
-export default Index;
+
+const mapStateToProps = (state) => {
+	return {
+		getArticleList: state.getArticleList,
+	};
+};
+const mapDispatchToProps = (dispatch) => {
+	return {
+		pushArticleList: (value) => {
+			dispatch({ type: 'ARTICLE', getArticleList: value });
+		},
+	};
+};
+Index = connect(mapStateToProps, mapDispatchToProps)(Index);
+export default withRouter(Index);

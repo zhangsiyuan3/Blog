@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import './index.scss';
-import { connect } from 'react-redux';
-// import store from "../../store/index"
-// const Comp = connect(...args)(Index);
 class Index extends Component {
 	constructor(props) {
 		super(props);
@@ -16,7 +13,6 @@ class Index extends Component {
 		this.props.history.push('/EditArticle');
 	};
 	render() {
-		// console.log(Comp, '[[[');
 		return (
 			<div className="header">
 				<p className="title" onClick={this.tohome}>

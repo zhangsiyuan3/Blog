@@ -1,7 +1,7 @@
 import { createStore } from 'redux'; // 引入createStore方法
 import { persistStore, persistReducer } from 'redux-persist'; //页面持久化
 import storageSession from 'redux-persist/lib/storage/session';
-import reducer from '../reducers/normal/reducer';
+import reducer from './normal/reducer';
 // const store = createStore(
 // 	reducer
 // 	// ···新的文件，记得引入哦
@@ -14,6 +14,5 @@ const storageConfig = {
 };
 const myPersistReducer = persistReducer(storageConfig, reducer);
 const store = createStore(myPersistReducer); // 创建数据存储仓库
-
 export const persistor = persistStore(store);
 export default store; //暴露出去

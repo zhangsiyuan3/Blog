@@ -8,15 +8,27 @@ export default (state = defaultState, action) => {
 	if (action.type === 'RICHTEXT') {
 		//dispath
 		let newState = { ...state };
-		newState.inputValue = action.text;
+		newState.RichText = action.RichText;
 		return newState;
 	} // 触发dispatch 事件，这里可以修改数据，删除。
 	if (action.type === 'ARTICLE') {
 		//dispath
 		let newState = { ...state };
-		newState.inputValue = action.text;
+		newState.getArticleList = action.getArticleList;
 		return newState;
-	} 
+	}
 
 	return state;
 };
+// const reducer = (state, action) => {
+//   if (!state) return {
+//     themgetArticleListeColor: []
+//   }
+//   switch (action.type) {
+//     case 'ARTICLE':
+//       return { ...state, getArticleList: action.getArticleList }
+//     default:
+//       return state
+//   }
+// }
+// export default reducer

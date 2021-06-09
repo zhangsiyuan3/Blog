@@ -39,7 +39,7 @@ class Index extends Component {
 		});
 		this.props.pushArticleList(ArticleList);
     this.props.history.push('/');
-    console.log(this)
+    console.log(this.props)
 	};
 	inputValChange = (e) => {
 		this.setState({
